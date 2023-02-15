@@ -1,3 +1,5 @@
+ // import com.azul.crs.client.service.GCLogMonitor;
+
 /**
  * This service class is intended to contain the basic logic for playing the number guessing game.
  * Separating menu logic and game logic is good for two reasons: it makes both classes as simple
@@ -17,7 +19,8 @@ public class GameService {
      * There is no need to change anything in this constructor.
      */
     public GameService(){
-        secretNumber = 3.14;
+      //  secretNumber = 3.14;
+        secretNumber = 2.71;
     }
 
     /**
@@ -27,6 +30,11 @@ public class GameService {
      * @return true if guessNumber is equal to the secretNumber, false otherwise.
      */
     public boolean checkGuess(double guessNumber) {
-        return false;
+        if (guessNumber == this.secretNumber) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
